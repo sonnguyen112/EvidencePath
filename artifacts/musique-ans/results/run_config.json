@@ -1,0 +1,18 @@
+{
+  "index": "/home/sonnguyen112/data/EvidencePathCode/artifacts/musique-ans/index",
+  "methods": [
+    "evidencepath",
+    "hipporag",
+    "sentence",
+    "linear",
+    "raptor",
+    "lightrag",
+    "vanilla"
+  ],
+  "budgets": [
+    1536,
+    2048,
+    3072
+  ],
+  "num_questions": 2417
+}

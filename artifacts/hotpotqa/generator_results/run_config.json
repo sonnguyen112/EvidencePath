@@ -1,0 +1,13 @@
+{
+  "index": "/home/sonnguyen112/data/EvidencePathCode/artifacts/hotpotqa/index",
+  "methods": [
+    "evidencepath",
+    "evidencepath-gemma",
+    "hipporag-gemma",
+    "sentence-gemma"
+  ],
+  "budgets": [
+    8192
+  ],
+  "num_questions": 5000
+}

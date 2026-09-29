@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "evidencepath-rag"
+version = "0.1.0"
+description = "EvidencePath-RAG: edge-based relational evidence assembly for multi-hop QA"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+models = [
+  "torch>=2.1",
+  "transformers>=4.40",
+  "sentence-transformers>=2.6",
+  "accelerate>=0.28",
+  "bitsandbytes>=0.43",
+]
+data = [
+  "datasets>=2.18",
+  "spacy>=3.7",
+]
+analysis = [
+  "matplotlib>=3.8",
+  "pandas>=2.0",
+]
+all = [
+  "torch>=2.1",
+  "transformers>=4.40",
+  "sentence-transformers>=2.6",
+  "accelerate>=0.28",
+  "bitsandbytes>=0.43",
+  "datasets>=2.18",
+  "spacy>=3.7",
+  "matplotlib>=3.8",
+  "pandas>=2.0",
+]
+
+[tool.setuptools]
+packages = ["evidencepath"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

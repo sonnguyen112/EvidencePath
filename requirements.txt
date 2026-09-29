@@ -1,0 +1,18 @@
+# Core implementation
+numpy>=1.24
+PyYAML>=6.0
+
+# Required for model-backed reproduction (install separately when needed)
+torch>=2.1
+transformers>=4.40
+sentence-transformers>=2.6
+accelerate>=0.28
+bitsandbytes>=0.43
+
+# Dataset and optional NER support
+datasets>=2.18
+spacy>=3.7
+
+# Optional result analysis
+pandas>=2.0
+matplotlib>=3.8

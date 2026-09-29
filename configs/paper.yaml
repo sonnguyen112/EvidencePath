@@ -1,0 +1,41 @@
+seed: 42
+
+index:
+  chunk_tokens: 256
+  chunk_overlap: 64
+  embedding_max_tokens: 512
+  embedding_batch_size: 32
+  lambda_entity: 0.40
+  semantic_neighbors: 1
+  entity_backend: spacy
+  deduplicate_documents: true
+
+retrieval:
+  top_k: 20
+  alpha: 0.85
+  iterations: 2
+  threshold: 0.35
+  terminal_multiplier: 0.30
+  edge_cutoff: 0.05
+  augmentation_cutoff: 0.60
+  hard_cap_thresholds: [0.35, 0.30, 0.25, 0.20, 0.15]
+  hard_cap_target_fraction: 0.90
+
+generation:
+  embedding_model: BAAI/bge-m3
+  generator_model: Qwen/Qwen3.5-9B
+  quantize_8bit: true
+  temperature: 0.0
+  top_p: 1.0
+  repetition_penalty: 1.0
+  max_input_tokens: 16384
+  max_answer_tokens: 64
+  max_entity_tokens: 256
+
+evaluation:
+  datasets: [hotpotqa, 2wikimultihopqa, musique-ans]
+  budgets: [1536, 2048, 3072]
+  hotpotqa_questions: 5000
+  2wikimultihopqa_questions: 5000
+  musique-ans_questions: 2417
+  bootstrap_resamples: 10000
